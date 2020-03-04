@@ -1,7 +1,6 @@
 package org.jbadams.practice.basics;
 
 import org.testng.Assert;
-import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 public class GoodbyeWorldTest {

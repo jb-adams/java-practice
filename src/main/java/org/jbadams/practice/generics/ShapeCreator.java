@@ -1,5 +1,7 @@
 package org.jbadams.practice.generics;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.lang.reflect.InvocationTargetException;
 
 public class ShapeCreator<T extends Shape> {
@@ -23,5 +25,9 @@ public class ShapeCreator<T extends Shape> {
 
     public String getShapeGreeting() {
         return shape.greeting();
+    }
+
+    public void createShapeList() {
+        List<T> shapeList = new ArrayList<>();
     }
 }
