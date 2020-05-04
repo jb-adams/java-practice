@@ -8,7 +8,11 @@
 
 plugins {
     // Apply the java-library plugin to add support for Java Library
+    id 'java'
+    id 'org.springframework.boot' version '2.0.5.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.7.RELEASE'
     id 'java-library'
+    id 'application'
 }
 
 repositories {
@@ -23,9 +27,19 @@ dependencies {
 
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation 'com.google.guava:guava:28.1-jre'
+    implementation 'org.springframework.boot:spring-boot-dependencies:2.0.5.RELEASE'
+    // implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    compile 'org.springframework.boot:spring-boot-starter-parent:2.2.5.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-aop:2.2.5.RELEASE'
+    // compile 'org.springframework.boot:spring-boot-starter-web'
 
     // Use TestNG framework, also requires calling test.useTestNG() below
     testImplementation 'org.testng:testng:7.0.0'
+}
+
+application {
+    mainClassName = 'org.jbadams.practice.App'
 }
 
 test {
